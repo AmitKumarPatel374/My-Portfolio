@@ -1,0 +1,39 @@
+import React, { useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import { gsap } from 'gsap';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
+import Home from './pages/Home';
+import Projects from './pages/Projects';
+import Skills from './pages/Skills';
+import Contact from './pages/Contact';
+import './App.css';
+
+function App() {
+  useEffect(() => {
+    // GSAP animations for page load
+    gsap.fromTo('.app', 
+      { opacity: 0, y: 50 },
+      { opacity: 1, y: 0, duration: 1, ease: 'power3.out' }
+    );
+  }, []);
+
+  return (
+    <div className="app">
+      <Header />
+      <main className="main-content">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/skills" element={<Skills />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </main>
+      <Footer />
+      <ScrollToTop />
+    </div>
+  );
+}
+
+export default App; 
