@@ -193,21 +193,21 @@ const Contact = () => {
               <div className="contact-icon">📧</div>
               <div className="contact-details">
                 <h3>Email</h3>
-                <p>amitpatel9302352967@gmail.com</p>
+                <p>{contactInfo.email || 'amitpatel9302352967@gmail.com'}</p>
               </div>
             </div>
             <div className="contact-item">
               <div className="contact-icon">📱</div>
               <div className="contact-details">
                 <h3>Phone</h3>
-                <p>+91 9753005051</p>
+                <p>{contactInfo.phone || '+91 9753005051'}</p>
               </div>
             </div>
             <div className="contact-item">
               <div className="contact-icon">📍</div>
               <div className="contact-details">
                 <h3>Location</h3>
-                <p>Bhopal, Madhya Pradesh, India</p>
+                <p>{contactInfo.location || 'Bhopal, Madhya Pradesh, India'}</p>
               </div>
             </div>
           </div>
@@ -215,15 +215,15 @@ const Contact = () => {
           <div className="social-links">
             <h3>Follow Me</h3>
             <div className="social-icons">
-              <a href="https://github.com/AmitKumarPatel374" target="_blank" rel="noopener noreferrer" className="social-link">
+              <a href={contactInfo.github || "https://github.com/AmitKumarPatel374"} target="_blank" rel="noopener noreferrer" className="social-link">
                 <span>🐙</span>
                 <span>GitHub</span>
               </a>
-              <a href="https://www.linkedin.com/in/amit-kumar-patel-053130316/" target="_blank" rel="noopener noreferrer" className="social-link">
+              <a href={contactInfo.linkedin || "https://www.linkedin.com/in/amit-kumar-patel-053130316/"} target="_blank" rel="noopener noreferrer" className="social-link">
                 <span>💼</span>
                 <span>LinkedIn</span>
               </a>
-              <a href="https://x.com/Amit_Patel1213" target="_blank" rel="noopener noreferrer" className="social-link">
+              <a href={contactInfo.twitter || "https://x.com/Amit_Patel1213"} target="_blank" rel="noopener noreferrer" className="social-link">
                 <span>🐦</span>
                 <span>Twitter</span>
               </a>
