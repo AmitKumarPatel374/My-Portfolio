@@ -8,14 +8,12 @@ import { EMAILJS_CONFIG } from '../emailjs-config';
 gsap.registerPlugin(ScrollTrigger);
 
 const Contact = () => {
-  const [contactInfo, setContactInfo] = useState({});
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     subject: '',
     message: ''
   });
-  const [loading, setLoading] = useState(true);
   const [submitted, setSubmitted] = useState(false);
   const [errorDetails, setErrorDetails] = useState('');
   const contactRef = useRef(null);
@@ -24,24 +22,7 @@ const Contact = () => {
   // EmailJS Configuration is imported from emailjs-config.js
 
   useEffect(() => {
-    // Fetch contact info from JSON server
-    const fetchContactInfo = async () => {
-      try {
-        const response = await fetch('http://localhost:3001/contact');
-        const data = await response.json();
-        setContactInfo(data);
-        setLoading(false);
-      } catch (error) {
-        console.error('Error fetching contact info:', error);
-        setLoading(false);
-      }
-    };
-
-    fetchContactInfo();
-  }, []);
-
-  useEffect(() => {
-    if (!loading && contactRef.current) {
+    if (contactRef.current) {
       // Animate contact section
       gsap.fromTo(contactRef.current.querySelectorAll('.contact-item'),
         { y: 50, opacity: 0 },
@@ -77,7 +58,7 @@ const Contact = () => {
         }
       );
     }
-  }, [loading]);
+  }, []);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -169,14 +150,7 @@ const Contact = () => {
     }
   }, []);
 
-  if (loading) {
-    return (
-      <div className="contact-loading">
-        <div className="loading-spinner"></div>
-        <p>Loading contact information...</p>
-      </div>
-    );
-  }
+
 
   return (
     <div className="contact">
@@ -193,21 +167,21 @@ const Contact = () => {
               <div className="contact-icon">📧</div>
               <div className="contact-details">
                 <h3>Email</h3>
-                <p>{contactInfo.email || 'amitpatel9302352967@gmail.com'}</p>
+                <p>amitpatel9302352967@gmail.com</p>
               </div>
             </div>
             <div className="contact-item">
               <div className="contact-icon">📱</div>
               <div className="contact-details">
                 <h3>Phone</h3>
-                <p>{contactInfo.phone || '+91 9753005051'}</p>
+                <p>+91 9753005051</p>
               </div>
             </div>
             <div className="contact-item">
               <div className="contact-icon">📍</div>
               <div className="contact-details">
                 <h3>Location</h3>
-                <p>{contactInfo.location || 'Bhopal, Madhya Pradesh, India'}</p>
+                <p>Bhopal, Madhya Pradesh, India</p>
               </div>
             </div>
           </div>
@@ -215,15 +189,15 @@ const Contact = () => {
           <div className="social-links">
             <h3>Follow Me</h3>
             <div className="social-icons">
-              <a href={contactInfo.github || "https://github.com/AmitKumarPatel374"} target="_blank" rel="noopener noreferrer" className="social-link">
+              <a href="https://github.com/AmitKumarPatel374" target="_blank" rel="noopener noreferrer" className="social-link">
                 <span>🐙</span>
                 <span>GitHub</span>
               </a>
-              <a href={contactInfo.linkedin || "https://www.linkedin.com/in/amit-kumar-patel-053130316/"} target="_blank" rel="noopener noreferrer" className="social-link">
+              <a href="https://www.linkedin.com/in/amit-kumar-patel-053130316/" target="_blank" rel="noopener noreferrer" className="social-link">
                 <span>💼</span>
                 <span>LinkedIn</span>
               </a>
-              <a href={contactInfo.twitter || "https://x.com/Amit_Patel1213"} target="_blank" rel="noopener noreferrer" className="social-link">
+              <a href="https://x.com/Amit_Patel1213" target="_blank" rel="noopener noreferrer" className="social-link">
                 <span>🐦</span>
                 <span>Twitter</span>
               </a>
