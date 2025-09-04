@@ -91,21 +91,25 @@
   font-size: 1rem;
 }
 
-.social-links h3 {
+.contact .social-links h3 {
   font-size: 1.3rem;
   font-weight: 600;
   margin-bottom: 1rem;
   color: white;
 }
+.contact .social-links{
+display: flex;
+flex-direction: column;
+}
 
-.social-icons {
+.contact .social-icons {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
   max-width: 100%;
 }
 
-.social-link {
+.contact .social-link {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -120,7 +124,7 @@
   min-width: fit-content;
 }
 
-.social-link:hover {
+.contact .social-link:hover {
   background: rgba(255, 255, 255, 0.2);
   transform: translateY(-2px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
@@ -320,13 +324,13 @@
     text-align: center;
   }
   
-  .social-icons {
+  .contact .social-icons {
     justify-content: center;
     flex-direction: column;
     align-items: center;
   }
   
-  .social-link {
+  .contact .social-link {
     width: 100%;
     max-width: 200px;
     justify-content: center;
@@ -343,12 +347,88 @@
     padding: 1.5rem;
   }
   
-  .social-icons {
+  .contact .social-icons {
     gap: 0.5rem;
   }
   
-  .social-link {
+  .contact .social-link {
     padding: 0.6rem 1rem;
     font-size: 0.9rem;
   }
 } 
+
+/* Ultra-small phones: tighten spacing and allow wrapping under 370px */
+@media (max-width: 370px) {
+  .contact {
+    padding: 0.75rem;
+  }
+
+  .contact-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .contact-header p {
+    font-size: 1rem;
+  }
+
+  .contact-content {
+    gap: 1rem;
+  }
+
+  .contact-info,
+  .contact-form {
+    padding: 1rem;
+    border-radius: 16px;
+  }
+
+  .contact-item {
+    padding: 0.75rem;
+    gap: 0.75rem;
+  }
+
+  .contact-icon {
+    font-size: 1.5rem;
+    width: 48px;
+    height: 48px;
+  }
+
+  .contact-details h3 {
+    font-size: 1rem;
+  }
+
+  .contact-details p {
+    font-size: 0.95rem;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .contact .social-icons {
+    width: 100%;
+    gap: 0.5rem;
+  }
+
+  .contact .social-link {
+    width: 100%;
+    max-width: 100%;
+    justify-content: center;
+    white-space: normal;
+    padding: 0.5rem 0.8rem;
+    font-size: 0.85rem;
+  }
+
+  .form-group label {
+    font-size: 0.95rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 0.8rem;
+    font-size: 0.95rem;
+  }
+
+  .submit-btn {
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 20px;
+  }
+}

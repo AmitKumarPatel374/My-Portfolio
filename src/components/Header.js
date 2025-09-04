@@ -21,6 +21,17 @@ const Header = () => {
       { y: -20, opacity: 0 },
       { y: 0, opacity: 1, duration: 0.6, stagger: 0.1, ease: 'power2.out', delay: 0.3 }
     );
+
+    // Toggle scrolled state for fixed header styling
+    const onScroll = () => {
+      const scrolled = window.scrollY > 10;
+      if (headerRef.current) {
+        headerRef.current.classList.toggle('scrolled', scrolled);
+      }
+    };
+    onScroll();
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
   useEffect(() => {
@@ -38,6 +49,15 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen);
     gsap.to('.mobile-menu', {
       height: isMenuOpen ? 0 : 'auto',
+      duration: 0.3,
+      ease: 'power2.out'
+    });
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+    gsap.to('.mobile-menu', {
+      height: 0,
       duration: 0.3,
       ease: 'power2.out'
     });
@@ -63,7 +83,7 @@ const Header = () => {
               key={item.path}
               to={item.path}
               className={`nav-link ${location.pathname === item.path ? 'active' : ''}`}
-              onClick={() => setIsMenuOpen(false)}
+              onClick={closeMenu}
             >
               {item.label}
             </Link>
@@ -86,7 +106,7 @@ const Header = () => {
             key={item.path}
             to={item.path}
             className={`mobile-nav-link ${location.pathname === item.path ? 'active' : ''}`}
-            onClick={() => setIsMenuOpen(false)}
+            onClick={closeMenu}
           >
             {item.label}
           </Link>

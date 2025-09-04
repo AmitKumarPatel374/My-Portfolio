@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import React, { useEffect, useRef } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import { gsap } from 'gsap';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -9,8 +9,11 @@ import Projects from './pages/Projects';
 import Skills from './pages/Skills';
 import Contact from './pages/Contact';
 import './App.css';
+import { useEffect as ReactUseEffect } from 'react';
 
 function App() {
+  const location = useLocation();
+  const mainRef = useRef(null);
   useEffect(() => {
     // GSAP animations for page load
     gsap.fromTo('.app', 
@@ -19,10 +22,19 @@ function App() {
     );
   }, []);
 
+  useEffect(() => {
+    if (mainRef.current) {
+      gsap.fromTo(mainRef.current,
+        { opacity: 0, y: 15 },
+        { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' }
+      );
+    }
+  }, [location]);
+
   return (
     <div className="app">
       <Header />
-      <main className="main-content">
+      <main ref={mainRef} className="main-content">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />

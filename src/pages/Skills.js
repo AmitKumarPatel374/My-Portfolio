@@ -11,7 +11,6 @@ const Skills = () => {
   const [skills, setSkills] = useState([]);
   const [loading, setLoading] = useState(true);
   const skillsRef = useRef(null);
-  const progressBarsRef = useRef(null);
 
   useEffect(() => {
     // Fetch skills using the new function
@@ -49,30 +48,7 @@ const Skills = () => {
         }
       );
 
-      // Animate progress bars
-      if (progressBarsRef.current) {
-        const progressBars = progressBarsRef.current.querySelectorAll('.progress-bar-fill');
-        progressBars.forEach((bar, index) => {
-          const skill = skills[index];
-          if (skill) {
-            gsap.fromTo(bar,
-              { width: 0 },
-              {
-                width: `${skill.level}%`,
-                duration: 1.5,
-                ease: 'power2.out',
-                delay: index * 0.1,
-                scrollTrigger: {
-                  trigger: progressBarsRef.current,
-                  start: 'top 80%',
-                  end: 'bottom 20%',
-                  toggleActions: 'play none none reverse'
-                }
-              }
-            );
-          }
-        });
-      }
+      // removed proficiency progress animations as requested
     }
   }, [loading, skills]);
 
@@ -85,7 +61,7 @@ const Skills = () => {
         const card = cardRef.current;
         card.addEventListener('mouseenter', () => {
           gsap.to(card, {
-            scale: 1.05,
+            scale: 1.03,
             duration: 0.3,
             ease: 'power2.out'
           });
@@ -97,6 +73,14 @@ const Skills = () => {
             ease: 'power2.out'
           });
         });
+
+        // Glow on hover
+        card.addEventListener('mouseenter', () => {
+          gsap.to(card, { boxShadow: '0 20px 40px rgba(0,0,0,0.4)', duration: 0.3 });
+        });
+        card.addEventListener('mouseleave', () => {
+          gsap.to(card, { boxShadow: '0 15px 30px rgba(0, 0, 0, 0.3)', duration: 0.3 });
+        });
       }
     }, []);
 
@@ -106,15 +90,7 @@ const Skills = () => {
           <span className="skill-icon">{skill.icon}</span>
           <h3 className="skill-name">{skill.name}</h3>
         </div>
-        <div className="skill-progress">
-          <div className="progress-bar">
-            <div 
-              className="progress-bar-fill"
-              style={{ width: `${skill.level}%` }}
-            ></div>
-          </div>
-          <span className="skill-level">{skill.level}%</span>
-        </div>
+        {/* removed percentage and proficiency bars as requested */}
         <span className="skill-category">{skill.category}</span>
       </div>
     );
@@ -144,26 +120,6 @@ const Skills = () => {
           <SkillCard key={skill.id} skill={skill} />
         ))}
       </div>
-      <div className="skills-progress">
-        <h3>Proficiency</h3>
-        <div className="progress-container">
-          {skillList.map(skill => (
-            <div key={skill.id} className="progress-item">
-              <div className="progress-label">
-                <span className="progress-icon">{skill.icon}</span>
-                <span className="progress-name">{skill.name}</span>
-                <span className="progress-percentage">{skill.level}%</span>
-              </div>
-              <div className="progress-bar">
-                <div 
-                  className="progress-bar-fill"
-                  style={{ width: `${skill.level}%` }}
-                ></div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
     </section>
   );
 
@@ -177,7 +133,6 @@ const Skills = () => {
         {renderSection('Languages', languageSkills)}
         {renderSection('Frontend', frontendSkills)}
         {renderSection('Tools', toolSkills)}
-        {renderSection('Other', otherSkills)}
       </div>
     </div>
   );

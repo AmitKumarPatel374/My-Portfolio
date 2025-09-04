@@ -6,7 +6,8 @@ export const getProjectsData = async () => {
     // Try to fetch from JSON server first
     const response = await fetch('http://localhost:3001/projects');
     if (response.ok) {
-      return await response.json();
+      const data = await response.json();
+      return data;
     }
   } catch (error) {
     console.log('JSON server not running, using fallback data');
@@ -22,7 +23,7 @@ export const getProjectsData = async () => {
         technologies: ["HTML5", "CSS3", "JavaScript"],
         image: "/freelacs.png",
         github: "https://github.com/AmitKumarPatel374/freelance-page.git",
-        live: "https://freelance-fudge-98d149.netlify.app",
+        live: "freelance-fudge-98d149.netlify.app",
         category: "major"
       },
       {
@@ -41,7 +42,7 @@ export const getProjectsData = async () => {
         description: "A practice project replicating the Olive website's design using HTML and Tailwind CSS. Built to improve Tailwind utility class skills and responsive layout techniques.Focuses purely on frontend styling without backend functionality.",
         technologies: ["HTML5", "Tailwind"],
         image: "/oliveclone.png",
-        github: "https://github.com/AmitKumarPatel374/olive-clone.git",
+        github: "https://github.com/username/weather-app",
         live: "https://olive-by-amit.netlify.app/",
         category: "major"
       },
@@ -72,7 +73,7 @@ export const getProjectsData = async () => {
         technologies: ["HTML5", "CSS3", "JavaScript", "Tailwind"],
         image: "/rockpapersc.png",
         github: "https://github.com/AmitKumarPatel374/Rock-Paper-Scissors.git",
-        live: "https://rok-paper-scissor-554e.netlify.app",
+        live: "rok-paper-scissor-554e.netlify.app",
         category: "major"
       },
       {
@@ -91,7 +92,7 @@ export const getProjectsData = async () => {
         description: "Amazon Clone where you can view manually added products, and clicking on them redirects to the real Amazon.com site.",
         technologies: ["HTML5", "CSS3"],
         image: "/amazonclone.png",
-        github: "https://github.com/AmitKumarPatel374/amazon-clone.git",
+        github: "https://github.com/username/lms-platform",
         live: "https://amazon-by-amit.netlify.app/",
         category: "major"
       },
@@ -112,7 +113,7 @@ export const getProjectsData = async () => {
         technologies: ["HTML5", "CSS3"],
         image: "/documentation.png",
         github: "https://github.com/AmitKumarPatel374/js-documentation.git",
-        live: "https://js-documentation-760e1d.netlify.app",
+        live: "js-documentation-760e1d.netlify.app",
         category: "major"
       },
       {
@@ -122,33 +123,63 @@ export const getProjectsData = async () => {
         technologies: ["HTML5", "CSS3"],
         image: "/blog.png",
         github: "https://github.com/AmitKumarPatel374/Blog-web.git",
-        live: "https://blog-web-70ea08.netlify.app",
+        live: "blog-web-70ea08.netlify.app",
+        category: "major"
+      },
+      {
+        id: 12,
+        title: "TestyVerse",
+        description: "TestyVerse is a React-based recipe management app where You can create, update, and delete recipes  Add your favorite recipes to a favorites list Smooth and secure experience with authentication integration",
+        technologies: ["HTML5", "Tailwind","React"],
+        image: "/TestyVerse.png",
+        github: "https://github.com/AmitKumarPatel374/testyVerse",
+        live: "https://testyverse.netlify.app/",
+        category: "major"
+      },
+      {
+        id: 13,
+        title: "MY E-Store",
+        description: "MY E-Store, a dynamic and interactive e-commerce app built with React and Tailwind CSS.",
+        technologies: ["HTML5", "Tailwind","React"],
+        image: "/my-e-store.png",
+        github: "https://github.com/AmitKumarPatel374/My-E-Store",
+        live: "https://my-e-store-by-amit.netlify.app/",
+        category: "major"
+      },
+      {
+        id: 14,
+        title: "employee management system",
+        description: "An Employee Management System built with React to efficiently manage employee  tasks through a user-friendly interface.",
+        technologies: ["HTML5", "Tailwind","React"],
+        image: "/ems.png",
+        github: "https://github.com/AmitKumarPatel374/employee-management-system",
+        live: "https://employee-management-system-by-amit.netlify.app/",
         category: "major"
       }
     ],
     minor: [
       {
-        id: 12,
+        id: 15,
         title: "Dr. A.P.J. Abdul Kalam Tribute Page",
         description: "A Tribute single page of Dr. A.P.J. Abdul Kalam (Missile Man of India).",
         technologies: ["HTML5", "CSS3"],
         image: "/tribute.png",
         github: "https://github.com/AmitKumarPatel374/kalam-tribute.git",
-        live: "https://apj-tribute-3732ac.netlify.app",
+        live: "apj-tribute-3732ac.netlify.app",
         category: "minor"
       },
       {
-        id: 13,
+        id: 16,
         title: "Job Appliction Form",
         description: "A simple Job Application Form That have inputs but dont have any backend support.",
         technologies: ["HTML5", "CSS3"],
         image: "/jobapplication.png",
         github: "https://github.com/AmitKumarPatel374/job-application-form-ui.git",
-        live: "https://job-application-form-6614f1.netlify.app",
+        live: "job-application-form-6614f1.netlify.app",
         category: "minor"
       },
       {
-        id: 14,
+        id: 17,
         title: "A Parallax Site",
         description: "A Parallax site That have a Parallel Image changing effect where bg photo showing changr by sliding",
         technologies: ["HTML5", "CSS3"],
@@ -158,17 +189,17 @@ export const getProjectsData = async () => {
         category: "minor"
       },
       {
-        id: 15,
+        id: 18,
         title: "A Landing Page",
         description: "A Landing Page of Full Stack Web Developer.",
         technologies: ["HTML5", "CSS3"],
         image: "/landing.png",
         github: "https://github.com/AmitKumarPatel374/Landing-Page.git",
-        live: "https://cs-landing-page-584174.netlify.app",
+        live: "cs-landing-page-584174.netlify.app",
         category: "minor"
       },
       {
-        id: 16,
+        id: 19,
         title: "Foodie Version",
         description: "A rasturant site that conatain a menu with special item and it helps me to understanding grid model.",
         technologies: ["HTML5", "CSS3"],
@@ -178,7 +209,7 @@ export const getProjectsData = async () => {
         category: "minor"
       },
       {
-        id: 17,
+        id: 20,
         title: "Guess IPL WInner Team",
         description: "A single page that have all teams of IPL but this is guessing page that which ipl team will win the match by clicking guess option.",
         technologies: ["HTML5", "CSS3","JavaScript"],
@@ -188,7 +219,7 @@ export const getProjectsData = async () => {
         category: "minor"
       },
       {
-        id: 18,
+        id: 21,
         title: "A Instagram Landing Page",
         description: "A sigle page that show how a post appear in our page give like option by double tap and also like button and story will appear for little time and automatically disspear",
         technologies: ["HTML5", "CSS3","JavaScript"],
@@ -198,7 +229,7 @@ export const getProjectsData = async () => {
         category: "minor"
       },
       {
-        id: 19,
+        id: 22,
         title: "Custom Slider",
         description: "A singl page that some photos and we can slide photo in 4 direcion up down , left right  and comes diferrent photos.",
         technologies: ["HTML5", "CSS3","JavaScript"],
@@ -208,7 +239,7 @@ export const getProjectsData = async () => {
         category: "minor"
       },
       {
-        id: 20,
+        id: 23,
         title: "Downloader view",
         description: "A small page that show downloader form 0% to 100%.",
         technologies: ["HTML5", "CSS3","JavaScript"],
@@ -218,7 +249,7 @@ export const getProjectsData = async () => {
         category: "minor"
       },
       {
-        id: 21,
+        id: 24,
         title: "TO DO List",
         description: "A small To DO list Page where we can add our new task and also delete our previous tasks.",
         technologies: ["HTML5", "CSS3","JavaScript"],
@@ -228,7 +259,7 @@ export const getProjectsData = async () => {
         category: "minor"
       },
       {
-        id: 22,
+        id: 25,
         title: "Whether ForCasting",
         description: "A whether forcasting app where we can see where forcast of our city and it give soe of whether details.",
         technologies: ["HTML5", "CSS3","JavaScript"],

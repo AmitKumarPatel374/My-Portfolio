@@ -10,6 +10,7 @@ const Home = () => {
   const heroRef = useRef(null);
   const contentRef = useRef(null);
   const aboutRef = useRef(null);
+  const parallaxRef = useRef(null);
 
   useEffect(() => {
     // Hero section animations
@@ -76,19 +77,33 @@ const Home = () => {
       repeat: -1
     });
 
+    // Parallax background subtle move
+    if (parallaxRef.current) {
+      gsap.to(parallaxRef.current, {
+        backgroundPosition: '60% 40%',
+        ease: 'none',
+        scrollTrigger: {
+          trigger: heroRef.current,
+          start: 'top top',
+          end: 'bottom top',
+          scrub: 0.5
+        }
+      });
+    }
+
   }, []);
 
   return (
     <div className="home">
       {/* Hero Section */}
-      <section ref={heroRef} className="hero">
+      <section ref={(el) => { heroRef.current = el; parallaxRef.current = el; }} className="hero">
         <div className="hero-content">
           <div className="hero-text">
             <h1 className="hero-title">
               Hi, I'm <span className="highlight">Amit Kumar Patel</span>
             </h1>
             <p className="hero-subtitle">
-              Full Stack Developer & Creative Problem Solver
+              Full Stack Web Developer & Creative Problem Solver
             </p>
             <div className="hero-buttons">
               <Link to="/projects" className="btn btn-primary">

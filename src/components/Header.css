@@ -10,6 +10,12 @@
   transition: all 0.3s ease;
 }
 
+.header.scrolled {
+  background: rgba(0, 0, 0, 0.35);
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
 .header-container {
   max-width: 1200px;
   margin: 0 auto;

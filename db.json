@@ -110,12 +110,42 @@
         "github": "https://github.com/AmitKumarPatel374/Blog-web.git",
         "live": "blog-web-70ea08.netlify.app",
         "category": "major"
+      },
+      {
+        "id": 12,
+        "title": "TestyVerse",
+        "description": "TestyVerse is a React-based recipe management app where You can create, update, and delete recipes  Add your favorite recipes to a favorites list Smooth and secure experience with authentication integration",
+        "technologies": ["HTML5", "Tailwind","React"],
+        "image": "/TestyVerse.png",
+        "github": "https://github.com/AmitKumarPatel374/testyVerse",
+        "live": "https://testyverse.netlify.app/",
+        "category": "major"
+      },
+      {
+        "id": 13,
+        "title": "MY E-Store",
+        "description": "MY E-Store, a dynamic and interactive e-commerce app built with React and Tailwind CSS.",
+        "technologies": ["HTML5", "Tailwind","React"],
+        "image": "/my-e-store.png",
+        "github": "https://github.com/AmitKumarPatel374/My-E-Store",
+        "live": "https://my-e-store-by-amit.netlify.app/",
+        "category": "major"
+      },
+      {
+        "id": 14,
+        "title": "employee management system",
+        "description": "An Employee Management System built with React to efficiently manage employee  tasks through a user-friendly interface.",
+        "technologies": ["HTML5", "Tailwind","React"],
+        "image": "/ems.png",
+        "github": "https://github.com/AmitKumarPatel374/employee-management-system",
+        "live": "https://employee-management-system-by-amit.netlify.app/",
+        "category": "major"
       }
     ],
 
     "minor": [
       {
-        "id": 12,
+        "id": 15,
         "title": "Dr. A.P.J. Abdul Kalam Tribute Page",
         "description": "A Tribute single page of Dr. A.P.J. Abdul Kalam (Missile Man of India).",
         "technologies": ["HTML5", "CSS3"],
@@ -125,7 +155,7 @@
         "category": "minor"
       },
       {
-        "id": 13,
+        "id": 16,
         "title": "Job Appliction Form",
         "description": "A simple Job Application Form That have inputs but dont have any backend support.",
         "technologies": ["HTML5", "CSS3"],
@@ -135,7 +165,7 @@
         "category": "minor"
       },
       {
-        "id": 14,
+        "id": 17,
         "title": "A Parallax Site",
         "description": "A Parallax site That have a Parallel Image changing effect where bg photo showing changr by sliding",
         "technologies": ["HTML5", "CSS3"],
@@ -145,7 +175,7 @@
         "category": "minor"
       },
       {
-        "id": 15,
+        "id": 18,
         "title": "A Landing Page",
         "description": "A Landing Page of Full Stack Web Developer.",
         "technologies": ["HTML5", "CSS3"],
@@ -155,7 +185,7 @@
         "category": "minor"
       },
       {
-        "id": 16,
+        "id": 19,
         "title": "Foodie Version",
         "description": "A rasturant site that conatain a menu with special item and it helps me to understanding grid model.",
         "technologies": ["HTML5", "CSS3"],
@@ -165,7 +195,7 @@
         "category": "minor"
       },
       {
-        "id": 17,
+        "id": 20,
         "title": "Guess IPL WInner Team",
         "description": "A single page that have all teams of IPL but this is guessing page that which ipl team will win the match by clicking guess option.",
         "technologies": ["HTML5", "CSS3","JavaScript"],
@@ -175,7 +205,7 @@
         "category": "minor"
       },
       {
-        "id": 18,
+        "id": 21,
         "title": "A Instagram Landing Page",
         "description": "A sigle page that show how a post appear in our page give like option by double tap and also like button and story will appear for little time and automatically disspear",
         "technologies": ["HTML5", "CSS3","JavaScript"],
@@ -185,7 +215,7 @@
         "category": "minor"
       },
       {
-        "id": 19,
+        "id": 22,
         "title": "Custom Slider",
         "description": "A singl page that some photos and we can slide photo in 4 direcion up down , left right  and comes diferrent photos.",
         "technologies": ["HTML5", "CSS3","JavaScript"],
@@ -195,7 +225,7 @@
         "category": "minor"
       },
       {
-        "id": 20,
+        "id": 23,
         "title": "Downloader view",
         "description": "A small page that show downloader form 0% to 100%.",
         "technologies": ["HTML5", "CSS3","JavaScript"],
@@ -205,7 +235,7 @@
         "category": "minor"
       },
       {
-        "id": 21,
+        "id": 24,
         "title": "TO DO List",
         "description": "A small To DO list Page where we can add our new task and also delete our previous tasks.",
         "technologies": ["HTML5", "CSS3","JavaScript"],
@@ -215,7 +245,7 @@
         "category": "minor"
       },
       {
-        "id": 22,
+        "id": 25,
         "title": "Whether ForCasting",
         "description": "A whether forcasting app where we can see where forcast of our city and it give soe of whether details.",
         "technologies": ["HTML5", "CSS3","JavaScript"],
@@ -229,7 +259,6 @@
   "skills": [
     { "id": 1, "name": "React", "level": 80, "category": "Frontend", "icon": "⚛️" },
     { "id": 2, "name": "JavaScript", "level": 90, "category": "Language", "icon": "🟨" },
-    { "id": 3, "name": "Python", "level": 30, "category": "Language", "icon": "🐍" },
     { "id": 4, "name": "Java", "level": 80, "category": "Language", "icon": "☕" },
     { "id": 5, "name": "C++", "level": 70, "category": "Language", "icon": "💻" },
     { "id": 6, "name": "C", "level": 90, "category": "Language", "icon": "🔣" },
@@ -241,12 +270,7 @@
     { "id": 12, "name": "Tailwind", "level": 80, "category": "Frontend", "icon": "🌬️" },
     { "id": 13, "name": "Bootstrap", "level": 60, "category": "Frontend", "icon": "🅱️" },
     { "id": 14, "name": "Cursor AI", "level": 40, "category": "Tool", "icon": "🤖" },
-    { "id": 15, "name": "Docker", "level": 5, "category": "Tool", "icon": "🐳" },
-    { "id": 16, "name": "Figma", "level": 5, "category": "Tool", "icon": "🎨" },
-    { "id": 17, "name": "Photoshop", "level": 5, "category": "Tool", "icon": "🖼️" },
-    { "id": 18, "name": "Jira", "level": 5, "category": "Tool", "icon": "📋" },
-    { "id": 19, "name": "GraphQL", "level": 5, "category": "Other", "icon": "🔗" },
-    { "id": 20, "name": "Sass", "level": 5, "category": "Other", "icon": "💎" }
+    { "id": 18, "name": "Jira", "level": 5, "category": "Tool", "icon": "📋" }
   ],
   "contact": {
     "email": "your.email@example.com",

@@ -9,6 +9,8 @@
   padding-top: 80px; /* Account for fixed header */
 }
 
+/* removed custom cursor styles */
+
 /* Page transitions */
 .page-enter {
   opacity: 0;

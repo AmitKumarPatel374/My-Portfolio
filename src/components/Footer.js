@@ -2,27 +2,38 @@ import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
 import './Footer.css';
+import { FaLinkedin } from "react-icons/fa6";
+import { FaGithubSquare } from "react-icons/fa";
+import { FaSquareXTwitter } from "react-icons/fa6";
+import { MdEmail } from "react-icons/md";
 
 const Footer = () => {
   const footerRef = useRef(null);
 
   useEffect(() => {
-    // Footer entrance animation
+    // Footer reveal on scroll
     gsap.fromTo(footerRef.current,
-      { y: 50, opacity: 0 },
-      { y: 0, opacity: 1, duration: 1, ease: 'power3.out' }
+      { y: 40, opacity: 0 },
+      { 
+        y: 0, opacity: 1, duration: 0.8, ease: 'power2.out',
+        scrollTrigger: {
+          trigger: footerRef.current,
+          start: 'top 90%',
+          once: true
+        }
+      }
     );
 
     // Animate social links
     gsap.fromTo(footerRef.current.querySelectorAll('.social-link'),
-      { scale: 0, opacity: 0 },
+      { y: 10, opacity: 0 },
       { 
-        scale: 1, 
-        opacity: 1, 
-        duration: 0.6, 
-        stagger: 0.1, 
-        ease: 'back.out(1.7)',
-        delay: 0.3
+        y: 0, opacity: 1, duration: 0.5, stagger: 0.08, ease: 'power2.out',
+        scrollTrigger: {
+          trigger: footerRef.current,
+          start: 'top 92%',
+          once: true
+        }
       }
     );
   }, []);
@@ -32,7 +43,7 @@ const Footer = () => {
       <div className="footer-content">
         <div className="footer-section">
           <h3>Amit Kumar Patel</h3>
-          <p>Full Stack Developer</p>
+          <p>Full Stack Web Developer</p>
           <p>Creating amazing digital experiences</p>
         </div>
 
@@ -50,16 +61,16 @@ const Footer = () => {
           <h4>Connect</h4>
           <div className="social-links">
             <a href="https://github.com/AmitKumarPatel374" target="_blank" rel="noopener noreferrer" className="social-link">
-              <span>🐙</span>
+              <span><FaGithubSquare /></span>
             </a>
             <a href="https://www.linkedin.com/in/amit-kumar-patel-053130316/" target="_blank" rel="noopener noreferrer" className="social-link">
-              <span>💼</span>
+              <span><FaLinkedin /></span>
             </a>
             <a href="https://x.com/Amit_Patel1213" target="_blank" rel="noopener noreferrer" className="social-link">
-              <span>🐦</span>
+              <span><FaSquareXTwitter /></span>
             </a>
             <a href="mailto:amitpatel9302352967@gmail.com" className="social-link">
-              <span>📧</span>
+              <span><MdEmail /></span>
             </a>
           </div>
         </div>

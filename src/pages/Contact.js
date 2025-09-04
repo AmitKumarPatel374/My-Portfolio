@@ -4,6 +4,9 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import emailjs from 'emailjs-com';
 import './Contact.css';
 import { EMAILJS_CONFIG } from '../emailjs-config';
+import { FaLinkedin } from "react-icons/fa6";
+import { FaGithubSquare } from "react-icons/fa";
+import { FaSquareXTwitter } from "react-icons/fa6";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -190,15 +193,15 @@ const Contact = () => {
             <h3>Follow Me</h3>
             <div className="social-icons">
               <a href="https://github.com/AmitKumarPatel374" target="_blank" rel="noopener noreferrer" className="social-link">
-                <span>🐙</span>
+                <span><FaGithubSquare /></span>
                 <span>GitHub</span>
               </a>
               <a href="https://www.linkedin.com/in/amit-kumar-patel-053130316/" target="_blank" rel="noopener noreferrer" className="social-link">
-                <span>💼</span>
+                <span><FaLinkedin /></span>
                 <span>LinkedIn</span>
               </a>
               <a href="https://x.com/Amit_Patel1213" target="_blank" rel="noopener noreferrer" className="social-link">
-                <span>🐦</span>
+                <span><FaSquareXTwitter /></span>
                 <span>Twitter</span>
               </a>
             </div>

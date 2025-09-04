@@ -80,7 +80,7 @@ const Projects = () => {
         
         card.addEventListener('mouseenter', () => {
           gsap.to(card, {
-            scale: 1.05,
+            scale: 1.03,
             duration: 0.3,
             ease: 'power2.out'
           });
@@ -93,6 +93,25 @@ const Projects = () => {
             ease: 'power2.out'
           });
         });
+
+        // Subtle tilt based on mouse position
+        const onMove = (e) => {
+          const rect = card.getBoundingClientRect();
+          const relX = (e.clientX - rect.left) / rect.width;
+          const relY = (e.clientY - rect.top) / rect.height;
+          const rotateY = (relX - 0.5) * 6;
+          const rotateX = (0.5 - relY) * 6;
+          gsap.to(card, { rotateY, rotateX, transformPerspective: 600, transformOrigin: 'center', duration: 0.2 });
+        };
+        const onLeave = () => {
+          gsap.to(card, { rotateX: 0, rotateY: 0, duration: 0.3, ease: 'power2.out' });
+        };
+        card.addEventListener('mousemove', onMove);
+        card.addEventListener('mouseleave', onLeave);
+        return () => {
+          card.removeEventListener('mousemove', onMove);
+          card.removeEventListener('mouseleave', onLeave);
+        };
       }
     }, []);
 
