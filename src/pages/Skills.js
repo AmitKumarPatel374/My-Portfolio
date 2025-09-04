@@ -109,7 +109,6 @@ const Skills = () => {
   const languageSkills = skills.filter(skill => skill.category === 'Language');
   const frontendSkills = skills.filter(skill => skill.category === 'Frontend');
   const toolSkills = skills.filter(skill => skill.category === 'Tool');
-  const otherSkills = skills.filter(skill => skill.category === 'Other');
 
   // Helper to render a section
   const renderSection = (title, skillList) => (
