@@ -23,7 +23,7 @@ export const getProjectsData = async () => {
         technologies: ["HTML5", "CSS3", "JavaScript"],
         image: "/freelacs.png",
         github: "https://github.com/AmitKumarPatel374/freelance-page.git",
-        live: "freelance-fudge-98d149.netlify.app",
+        live: "https://freelance-page-by-amit.netlify.app",
         category: "major"
       },
       {
@@ -73,7 +73,7 @@ export const getProjectsData = async () => {
         technologies: ["HTML5", "CSS3", "JavaScript", "Tailwind"],
         image: "/rockpapersc.png",
         github: "https://github.com/AmitKumarPatel374/Rock-Paper-Scissors.git",
-        live: "rok-paper-scissor-554e.netlify.app",
+        live: "https://rok-paper-scissor-554e.netlify.app",
         category: "major"
       },
       {
@@ -113,7 +113,7 @@ export const getProjectsData = async () => {
         technologies: ["HTML5", "CSS3"],
         image: "/documentation.png",
         github: "https://github.com/AmitKumarPatel374/js-documentation.git",
-        live: "js-documentation-760e1d.netlify.app",
+        live: "https://js-documentation-760e1d.netlify.app",
         category: "major"
       },
       {
@@ -123,7 +123,7 @@ export const getProjectsData = async () => {
         technologies: ["HTML5", "CSS3"],
         image: "/blog.png",
         github: "https://github.com/AmitKumarPatel374/Blog-web.git",
-        live: "blog-web-70ea08.netlify.app",
+        live: "https://blog-web-70ea08.netlify.app",
         category: "major"
       },
       {
@@ -165,7 +165,7 @@ export const getProjectsData = async () => {
         technologies: ["HTML5", "CSS3"],
         image: "/tribute.png",
         github: "https://github.com/AmitKumarPatel374/kalam-tribute.git",
-        live: "apj-tribute-3732ac.netlify.app",
+        live: "https://apj-tribute-3732ac.netlify.app",
         category: "minor"
       },
       {
@@ -175,7 +175,7 @@ export const getProjectsData = async () => {
         technologies: ["HTML5", "CSS3"],
         image: "/jobapplication.png",
         github: "https://github.com/AmitKumarPatel374/job-application-form-ui.git",
-        live: "job-application-form-6614f1.netlify.app",
+        live: "https://job-application-form-6614f1.netlify.app",
         category: "minor"
       },
       {
@@ -195,7 +195,7 @@ export const getProjectsData = async () => {
         technologies: ["HTML5", "CSS3"],
         image: "/landing.png",
         github: "https://github.com/AmitKumarPatel374/Landing-Page.git",
-        live: "cs-landing-page-584174.netlify.app",
+        live: "https://cs-landing-page-584174.netlify.app",
         category: "minor"
       },
       {
